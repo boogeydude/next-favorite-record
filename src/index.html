@@ -6,37 +6,33 @@
 </head>
 <body>
 	<header>
-		<div class="navbar">
+		<div class="container">
 			<h1><i class="fas fa-record-vinyl"></i> Next Favorite Record</h1>
 		</div>
 	</header>
 
-	<main>
-		<section>
-			<div class="container">
-				<div class="form-container">
-					<form>
-						<div class="form-inputs">
-							<input type="text" class="artist-input-01"></input>
-							<input type="text" class="artist-input-02"></input>
-						</div>
-						<div class="form-buttons">
-							<button type="submit" class="submit btn">Submit</button>
-						</div>
-					</form>
+	<section id="form">
+		<div class="container">
+			<form>
+				<div class="form-inputs">
+					<input type="text" class="artist-input-01" placeholder="Band/Artist Name 01"></input>
+					<input type="text" class="artist-input-02" placeholder="Band/Artist Name 02"></input>
 				</div>
-			</div>
-		</section>
+				<div class="form-buttons">
+					<button type="submit" class="submit">Submit</button>
+				</div>
+			</form>
+		</div>
+	</section>
 
-		<section>
-			<div class="container">
-				<div class="results-container">
-					<h2 class="results-album-title"></h2>
-					<h3 class="results-album-artist"></h3>
-					<img class="results-album-img" src="#" alt="">
-				</div>
+	<section id="results">
+		<div class="container">
+			<div class="results-content">
+				<h2 class="results-album-title"></h2>
+				<h3 class="results-album-artist"></h3>
+				<img class="results-album-img" src="#" alt="">
 			</div>
-		</section>
-	</main>
+		</div>
+	</section>
 </body>
 </html>
