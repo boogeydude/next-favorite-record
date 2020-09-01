@@ -41,7 +41,23 @@ class Lastfm {
 
     const similarArtistAlbumsObj = await similarArtistAlbumsRes.json();
 
-    const similarArtistTopAlbum = similarArtistAlbumsObj.topalbums.album[0];
+    const similarArtistAlbums = similarArtistAlbumsObj.topalbums.album;
+    
+    function contains(albumName, keywords) {
+      let flag = 0;
+      keywords.forEach(function(keyword) {
+        flag = flag + albumName.includes(keyword)
+      });
+      return (flag === 0);
+    }
+
+    const compilationKeywords = "greatest, hits, best, collection, essential, disc".split(", ");
+
+    const filteredAlbumsByKeyword = similarArtistAlbums.filter(album => contains(album.name.toLowerCase(), compilationKeywords));
+
+    const filtereAlbumsByMissingImgs = filteredAlbumsByKeyword.filter(album => album.image[3]["#text"].length > 0);
+
+    const similarArtistTopAlbum = filtereAlbumsByMissingImgs[0];
 
     return similarArtistTopAlbum;
   }

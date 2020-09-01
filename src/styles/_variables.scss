@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 
-$font-stack: 'Merriweather', serif;
-$primary: #ffca28;
-$primary-light: #fffd61;
-$primary-dark: #c79a00;
+$font-stack: 'Lato', sans-serif;
+$primary: #e91e63;  // white txt
+$primary-light: #ff6090; // dark txt
+$primary-dark: #b0003a; // white
+$medium-light: #e0e0e0;
+$medium-dark: #aeaeae;
 $light: #fff;
-$medium: #333;
 $dark: #000;
 
 $bg-img: url('../images/anthony-martino.jpg');

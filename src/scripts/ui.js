@@ -14,7 +14,7 @@ class UI {
     this.removeLoader();
 
     this.resultsAlbumTitle.textContent = similarArtistTopAlbum.name;
-    this.resultsAlbumArtist.textContent = similarArtistTopAlbum.artist.name;
+    this.resultsAlbumArtist.textContent = `by ${similarArtistTopAlbum.artist.name}`;
     this.resultsAlbumImg.src = similarArtistTopAlbum.image[3]["#text"];
   }
 
@@ -31,7 +31,7 @@ class UI {
 
     const loaderImg = document.createElement('div');
     loaderImg.classList.add('loader');
-    this.resultsContainer.insertBefore(loaderImg, this.resultsContent);
+    this.resultsContent.insertBefore(loaderImg, this.resultsAlbumTitle);
   }
 
   removeLoader() {
@@ -41,13 +41,14 @@ class UI {
   }
 
   displayAlert(msg) {
+    this.clearResults();
     this.removeLoader();
     this.removeAlert();
 
     const alertMsg = document.createElement('p');
     alertMsg.classList.add('alert-msg');
     alertMsg.textContent = msg;
-    this.resultsContainer.insertBefore(alertMsg, this.resultsContent);
+    this.resultsContent.insertBefore(alertMsg, this.resultsAlbumTitle);
   }
 
   removeAlert() {
