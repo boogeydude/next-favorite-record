@@ -6,19 +6,23 @@ import { lastfm } from "./lastfm";
 ui.submitBtn.addEventListener('click', clickSubmit);
 
 function clickSubmit(e) {
+  ui.clearResults();
+  ui.removeAlert();
+
   if (ui.artistInput01.value !== '' && ui.artistInput02.value !== '') {
-    ui.clearResults();
-    lastfm.getCommonSimilarArtistName(ui.artistInput01.value, ui.artistInput02.value)
+    ui.displayLoader();
 
-    .then(similarArtistName => {
-      return lastfm.getCommonSimilarArtistAlbum(similarArtistName)
+    lastfm.getRandomCommonSimilarArtist(ui.artistInput01.value, ui.artistInput02.value)
+    .then(randomSimilarArtist => {
+      return lastfm.getArtistTopAlbum(randomSimilarArtist)
     })
-
     .then(similarArtistTopAlbum => {
+      ui.removeLoader();
       ui.displayResults(similarArtistTopAlbum);
     })
-
     .catch(error => {
+      console.log(error);
+      ui.removeLoader();
       ui.displayAlert(error.message);
     })
 

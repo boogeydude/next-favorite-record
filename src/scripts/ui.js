@@ -3,35 +3,28 @@ class UI {
     this.artistInput01 = document.querySelector('.artist-input-01');
     this.artistInput02 = document.querySelector('.artist-input-02');
     this.submitBtn = document.querySelector('.submit');
-    this.resultsContainer = document.querySelector('#results .container');
-    this.resultsContent = document.querySelector('.results-content');
+    this.results = document.querySelector('.results');
     this.resultsAlbumTitle = document.querySelector('.results-album-title');
     this.resultsAlbumArtist = document.querySelector('.results-album-artist');
     this.resultsAlbumImg = document.querySelector('.results-album-img');
   }
   
   displayResults(similarArtistTopAlbum) {
-    this.removeLoader();
-
     this.resultsAlbumTitle.textContent = similarArtistTopAlbum.name;
-    this.resultsAlbumArtist.textContent = `by ${similarArtistTopAlbum.artist.name}`;
+    this.resultsAlbumArtist.innerHTML = `<span class='by'>by</span> ${similarArtistTopAlbum.artist.name}`;
     this.resultsAlbumImg.src = similarArtistTopAlbum.image[3]["#text"];
   }
 
   clearResults() {
-    this.displayLoader();
-
     this.resultsAlbumTitle.textContent = '';
     this.resultsAlbumArtist.textContent = '';
     this.resultsAlbumImg.src = '#';
   }
 
   displayLoader() {
-    this.removeAlert();
-
     const loaderImg = document.createElement('div');
     loaderImg.classList.add('loader');
-    this.resultsContent.insertBefore(loaderImg, this.resultsAlbumTitle);
+    this.results.insertBefore(loaderImg, this.resultsAlbumTitle);
   }
 
   removeLoader() {
@@ -41,14 +34,10 @@ class UI {
   }
 
   displayAlert(msg) {
-    this.clearResults();
-    this.removeLoader();
-    this.removeAlert();
-
     const alertMsg = document.createElement('p');
     alertMsg.classList.add('alert-msg');
     alertMsg.textContent = msg;
-    this.resultsContent.insertBefore(alertMsg, this.resultsAlbumTitle);
+    this.results.insertBefore(alertMsg, this.resultsAlbumTitle);
   }
 
   removeAlert() {
