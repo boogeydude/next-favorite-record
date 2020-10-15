@@ -23,7 +23,7 @@ function clickSubmit(event) {
     .catch(error => {
       ui.removeLoader();
 
-      if (error.message = 'Albums length error') {
+      if (error.message === 'Albums length error') {
         clickSubmit.call(this);
       } else {
         ui.displayAlert(error.message);

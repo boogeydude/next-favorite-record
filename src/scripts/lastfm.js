@@ -63,7 +63,7 @@ class Lastfm {
       const artistAlbums = parsedJsonData.topalbums.album;
 
       // *****
-      // HANDLE THIS LENGTH ERROR
+      // HANDLE THIS LENGTH ERROR BETTER
       // *****
       console.log(artistAlbums.length)
       if (artistAlbums.length < 50) {
