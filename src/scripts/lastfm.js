@@ -66,6 +66,9 @@ class Lastfm {
       // HANDLE THIS LENGTH ERROR
       // *****
       console.log(artistAlbums.length)
+      if (artistAlbums.length < 50) {
+        throw new Error('Albums length error');
+      }
     
       // function to filter out compilation albums
       function contains(albumName) {

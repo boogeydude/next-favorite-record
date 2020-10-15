@@ -5,7 +5,7 @@ import { lastfm } from "./lastfm";
 
 ui.submitBtn.addEventListener('click', clickSubmit);
 
-function clickSubmit(e) {
+function clickSubmit(event) {
   ui.clearResults();
   ui.removeAlert();
 
@@ -21,14 +21,20 @@ function clickSubmit(e) {
       ui.displayResults(similarArtistTopAlbum);
     })
     .catch(error => {
-      console.log(error);
       ui.removeLoader();
-      ui.displayAlert(error.message);
+
+      if (error.message = 'Albums length error') {
+        clickSubmit.call(this);
+      } else {
+        ui.displayAlert(error.message);
+      }
     })
 
   } else {
     ui.displayAlert('Please fill in both inputs.');
   }
 
-  e.preventDefault();
+  if (event) {
+    event.preventDefault();
+  }
 }
