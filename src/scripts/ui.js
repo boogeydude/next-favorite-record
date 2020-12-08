@@ -22,9 +22,11 @@ class UI {
   }
 
   displayLoader() {
-    const loaderImg = document.createElement('div');
-    loaderImg.classList.add('loader');
-    this.results.insertBefore(loaderImg, this.resultsAlbumTitle);
+    if (document.querySelector('.loader') === null) {
+      const loaderImg = document.createElement('div');
+      loaderImg.classList.add('loader');
+      this.results.insertBefore(loaderImg, this.resultsAlbumTitle);
+    }
   }
 
   removeLoader() {

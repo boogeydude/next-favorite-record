@@ -21,11 +21,10 @@ function clickSubmit(event) {
       ui.displayResults(similarArtistTopAlbum);
     })
     .catch(error => {
-      ui.removeLoader();
-
       if (error.message === 'Albums length error') {
         clickSubmit();
       } else {
+        ui.removeLoader();
         ui.displayAlert(error.message);
       }
     })
