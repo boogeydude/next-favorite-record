@@ -71,7 +71,7 @@ class Lastfm {
       }
     
       // function to filter out compilation albums
-      function contains(albumName) {
+      function doesNotContain(albumName) {
         const compilationKeywords = "best, collection, deluxe, disc, essential, greatest hits, hits, volume".split(", ");
         let flag = 0;
 
@@ -83,7 +83,7 @@ class Lastfm {
       }
   
       // filter out compilaton albums
-      const filteredAlbumsByCompKeywords = artistAlbums.filter(album => contains(album.name.toLowerCase()));
+      const filteredAlbumsByCompKeywords = artistAlbums.filter(album => doesNotContain(album.name.toLowerCase()));
   
       // filter out albums with missing imgs
       const filteredAlbumsByMissingImgs = filteredAlbumsByCompKeywords.filter(album => album.image[3]["#text"].length > 0);
