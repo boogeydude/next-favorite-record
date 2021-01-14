@@ -39,7 +39,7 @@ class UI {
     const alertMsg = document.createElement('p');
     alertMsg.classList.add('alert-msg');
     alertMsg.textContent = msg;
-    this.results.insertBefore(alertMsg, this.resultsAlbumTitle);
+    this.results.appendChild(alertMsg, this.results);
   }
 
   removeAlert() {
