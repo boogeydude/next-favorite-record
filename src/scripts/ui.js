@@ -22,7 +22,7 @@ class UI {
 
     resultsAlbumArtist.classList.add("results-album-artist");
 
-    resultsAlbumArtist.textContent = similarArtistTopAlbum.artist.name;
+    resultsAlbumArtist.innerHTML = `<span class='by'>by</span> ${similarArtistTopAlbum.artist.name}`;
 
     this.results.appendChild(resultsAlbumArtist);
 

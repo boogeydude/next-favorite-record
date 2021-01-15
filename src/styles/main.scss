@@ -69,6 +69,10 @@ section {
       border: 1px solid rgba($color-light, 0.2);
       border-radius: 1.2rem;
       outline: 0;
+
+      &:focus {
+        border: 1px solid $color-primary-light;
+      }
     }
 
     ::placeholder {
@@ -112,24 +116,53 @@ section {
       line-height: 1.2;
       margin-bottom: 0.4rem;
       color: $color-primary;
+
+      opacity: 0;
+      animation-name: fadein;
+      animation-duration: 0.8s;
+      animation-delay: 0;
+      animation-fill-mode: forwards;
+    }
+
+    .by {
+      font-size: 1.6rem;
+      font-weight: 400;
     }
 
     &-album-artist {
       font-size: 2.0rem;
       font-weight: 700;
+
+      opacity: 0;
+      animation-name: fadein;
+      animation-duration: 0.8s;
+      animation-delay: .8s;
+      animation-fill-mode: forwards;
     }
 
     &-album-img-container {
       display: inline-block;
       margin: 1.4rem 0 3.4rem;
-      padding: 1.2rem;
+      padding: 1.0rem;
       background: #fff;
       border: 1px solid rgba($color-light, 0.2);
+
+      opacity: 0;
+      animation-name: fadein;
+      animation-duration: 0.8s;
+      animation-delay: 1.6s;
+      animation-fill-mode: forwards;
     }
 
     &-album-img {
       display: block;
       max-width: 100%;
+      border: 1px solid rgba($color-light, 0.2);
+      transition: opacity .2s;
+
+      &:hover {
+        opacity: 0.4;
+      }
     }
 
     .loader {
@@ -152,6 +185,17 @@ section {
     .alert-msg {
       font-size: 1.6rem;
     }
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: scale(0.0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.0);
   }
 }
 
