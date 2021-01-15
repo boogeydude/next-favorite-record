@@ -31,16 +31,20 @@ class UI {
     const resultsAlbumImgContainer = document.createElement("div");
     const resultsAlbumLink = document.createElement("a");
     const resultsAlbumImg = document.createElement("img");
+    const resultsAlbumImgIcon = document.createElement("i");
 
     resultsAlbumImgContainer.classList.add("results-album-img-container");
     resultsAlbumLink.classList.add("results-album-link");
     resultsAlbumImg.classList.add("results-album-img");
+    resultsAlbumImgIcon.classList.add("fas");
+    resultsAlbumImgIcon.classList.add("fa-play-circle");
 
     resultsAlbumLink.href = similarArtistTopAlbum.url;
     resultsAlbumLink.setAttribute("target", "_blank");
     resultsAlbumImg.src = similarArtistTopAlbum.image[3]["#text"];
 
     resultsAlbumLink.appendChild(resultsAlbumImg);
+    resultsAlbumLink.appendChild(resultsAlbumImgIcon);
     resultsAlbumImgContainer.appendChild(resultsAlbumLink);
     this.results.appendChild(resultsAlbumImgContainer);
   }
