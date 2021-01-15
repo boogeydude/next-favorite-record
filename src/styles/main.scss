@@ -43,7 +43,7 @@ section {
   padding: 0 4.0rem;
 
   &:last-child {
-    margin-bottom: 12.0rem;
+    margin-bottom: 10.0rem;
   }
 
   .card {
@@ -129,6 +129,7 @@ section {
 
     &-album-img {
       display: block;
+      max-width: 100%;
     }
 
     .loader {
