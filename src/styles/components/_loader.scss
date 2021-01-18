@@ -1,0 +1,11 @@
+.loader {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-top: 10px solid $color-primary-dark;
+  border-right: 10px solid $color-primary-light;
+  border-bottom: 10px solid $color-primary-light;
+  border-left: 10px solid $color-primary-light;
+  border-radius: 50%;
+  animation: spin 1.0s infinite linear;
+}

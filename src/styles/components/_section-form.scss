@@ -1,0 +1,52 @@
+.section-form {
+  margin-bottom: 2.0rem;
+  padding: $section-padding;
+
+  .form-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    input[type="text"] {
+      font-family: $font-stack;
+      font-size: 1.8rem;
+      margin-bottom: 1.0rem;
+      padding: 2.0rem;
+      color: $color-dark;
+      border: 1px solid rgba($color-light, 0.2);
+      border-radius: $border-radius;
+      outline: 0;
+
+      &:focus {
+        border: 1px solid $color-primary;
+      }
+    }
+
+    ::placeholder {
+      color: rgba($color-light, 0.4);
+    }
+  }
+
+  .form-buttons {
+    display: flex;
+    justify-content: center;
+
+    button {
+      font-family: $font-stack;
+      font-size: 1.8rem;
+      font-weight: 700;
+      width: 100%;
+      padding: 2.0rem;
+      color: #fff;
+      background: linear-gradient(to top right, $color-primary 0%, $color-primary-light 100%);
+      border: none;
+      border-radius: $border-radius;
+      outline: 0;
+      cursor: pointer;
+
+      &:hover {
+        background: linear-gradient(to top right, $color-primary 0%, $color-primary-light 50%);
+      }
+    }
+  }
+}
