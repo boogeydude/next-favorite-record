@@ -1,28 +1,28 @@
 .section-results {
-  margin-bottom: 10.0rem;
-  padding: $section-padding;
+  margin-bottom: 10rem;
+  padding: 0 4rem;
 
   .results {
     text-align: center;
     min-height: 46.0rem;
 
     &-album-title {
-      font-size: 3.6rem;
-      font-weight: 900;
+      font-size: 3.8rem;
+      font-weight: 700;
       font-style: italic;
       line-height: 1.2;
-      margin-bottom: 0.4rem;
+      margin-bottom: .5rem;
       color: $color-primary;
 
       opacity: 0;
       animation-name: fadein;
-      animation-duration: 0.8s;
+      animation-duration: .8s;
       animation-delay: 0;
       animation-fill-mode: forwards;
     }
 
     &-album-artist {
-      font-size: 2.0rem;
+      font-size: 2.3rem;
       font-weight: 700;
 
       opacity: 0;
@@ -32,17 +32,18 @@
       animation-fill-mode: forwards;
 
       .by {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         font-weight: 400;
+        letter-spacing: .5px;
       }
     }
 
     &-album-img-container {
       display: inline-block;
       margin: 1.4rem 0 3.4rem;
-      padding: 1.0rem;
+      padding: 1rem;
       background: #fff;
-      border: 1px solid rgba($color-light, 0.2);
+      border: 1px solid rgba($shade-light, 0.2);
 
       opacity: 0;
       animation-name: fadein;
@@ -64,7 +65,7 @@
     &-album-img {
       display: block;
       max-width: 100%;
-      border: 1px solid rgba($color-light, 0.2);
+      border: 1px solid rgba($shade-light, 0.2);
       transition: opacity .5s, filter .5s;
     }
 
@@ -72,10 +73,10 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      font-size: 7.0rem;
-      line-height: 8.0rem;
-      height: 8.0rem;
-      width: 8.0rem;
+      font-size: 7rem;
+      line-height: 8rem;
+      height: 8rem;
+      width: 8rem;
       color: $color-primary;
       background: #fff;
       border-radius: 50%;
@@ -85,8 +86,10 @@
     }
 
     .alert-msg {
-      font-size: 1.6rem;
-      color: $color-dark;
+      font-size: 1.8rem;
+      font-weight: 400;
+      letter-spacing: .5px;
+      color: $shade-dark;
     }
   }
 }
