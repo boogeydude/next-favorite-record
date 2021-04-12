@@ -9,7 +9,7 @@ class Lastfm {
 
     for (let i = 0; i < 2; i++) {
       // fetch artist data from api
-      let fetchedData = await fetch (`http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=${artistInputValues[i]}&api_key=${this.apiKey}&format=json&autocorrect[0|1]`);
+      let fetchedData = await fetch (`https://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=${artistInputValues[i]}&api_key=${this.apiKey}&format=json&autocorrect[0|1]`);
 
       // throw error if bad response from api
       if (fetchedData.status >= 400 && fetchedData.status < 600) {
@@ -49,7 +49,7 @@ class Lastfm {
     let similarArtistTopAlbum;
 
     // fetch artist's top albums data from api 
-    const fetchedData = await fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${randomSimilarArtist}&api_key=${this.apiKey}&format=json`);
+    const fetchedData = await fetch(`https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${randomSimilarArtist}&api_key=${this.apiKey}&format=json`);
 
     // throw error if bad response from api
     if (fetchedData.status >= 400 && fetchedData.status < 600) {
