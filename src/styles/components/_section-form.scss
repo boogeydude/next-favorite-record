@@ -8,24 +8,15 @@
     justify-content: center;
 
     input {
-      font-family: $font-primary;
-      font-size: 1.8rem;
-      font-weight: 400;
-      letter-spacing: .5px;
       margin-bottom: 1rem;
       padding: 2rem;
-      color: $shade-dark;
       border: 1px solid rgba($shade-light, .4);
-      border-radius: 20px;
+      border-radius: 12px;
       outline: 0;
 
       &:focus {
         border: 1px solid $color-primary;
       }
-    }
-
-    ::placeholder {
-      color: rgba($shade-light, .4);
     }
   }
 
@@ -34,20 +25,14 @@
     justify-content: center;
 
     button {
-      font-family: $font-primary;
-      font-size: 1.6rem;
-      font-weight: 700;
-      letter-spacing: 1.25px;
-      text-transform: uppercase;
       width: 100%;
       padding: 2rem;
-      color: #fff;
       background: $color-primary;
       border: none;
-      border-radius: 20px;
+      border-radius: 12px;
       outline: 0;
       cursor: pointer;
-      transition: all .2s ease;
+      transition: all .4s ease;
 
       &:hover {
         background: $color-primary-light;
