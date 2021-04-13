@@ -41,7 +41,7 @@ section {
 
   .results {
     text-align: center;
-    min-height: 46.0rem;
+    min-height: 44.0rem;
 
     &-album-title {
       margin-bottom: .5rem;
@@ -53,6 +53,7 @@ section {
 
     &-album-img-container {
       display: inline-block;
+      margin-bottom: 3rem;
       padding: .5rem;
       background: #fff;
       border: 1px solid rgba($shade-light, .5);
