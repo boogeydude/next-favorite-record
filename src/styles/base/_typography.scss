@@ -11,13 +11,13 @@ h1 {
 input {
   font-family: $font-primary;
   font-size: 1.8rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: .5px;
   color: $shade-dark;
 }
 
 ::placeholder {
-  color: rgba($shade-light, .4);
+  color: rgba($shade-light, .5);
 }
 
 button {
@@ -26,6 +26,12 @@ button {
   font-weight: 500;
   letter-spacing: 1.25px;
   text-transform: uppercase;
+  color: $shade-dark;
+  background: $color-primary;
+
+  &:hover {
+    background: $color-primary-light;
+  }
 }
 
 .header {
@@ -48,8 +54,8 @@ button {
     font-style: italic;
     line-height: 1.2;
     color: $color-primary;
-
     opacity: 0;
+
     animation-name: fadein;
     animation-duration: .8s;
     animation-delay: 0;
@@ -58,19 +64,27 @@ button {
 
   &-album-artist {
     font-size: 2.3rem;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: .15px;
+    color: $shade-dark;
 
     opacity: 0;
     animation-name: fadein;
-    animation-duration: 0.8s;
+    animation-duration: .8s;
     animation-delay: .8s;
     animation-fill-mode: forwards;
 
     .by {
       font-size: 1.6rem;
       font-weight: 400;
-      letter-spacing: .25x;
+      letter-spacing: .25px;
     }
+  }
+
+  .alert-msg {
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: .25px;
+    color: $shade-dark;
   }
 }
